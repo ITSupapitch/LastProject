@@ -1,0 +1,218 @@
+
+body, html {
+    height: 100%;
+    line-height: 2;
+    font-size: 1em;
+    background-color: white;
+    font-family: 'Prompt', sans-serif;
+    margin-bottom: 125px;
+    padding-bottom: 60%;
+}
+.side-menu {
+    width:16em;
+    height: auto;
+    margin:5em auto 0;
+    font-size: 1.1em;
+    line-height: 3em;
+    color: #fff;
+    font-weight:500;
+    text-transform:uppercase;
+    position:absolute;
+    top:100px; 
+    bottom:0;
+    left: -10em;
+}
+.side-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.side-menu ul li {
+    display:block;
+    background-color: #333;
+    height: 4.5em;
+    padding: 1em 1.5em;
+    position: relative;
+    -webkit-transition: -webkit-transform 0.5s,     background-color .5s, color .5s;
+    transition: transform .5s, background-color .5s, color .5s;
+}
+/*the colors of the different columns*/
+.side-menu ul li:nth-child(1) { background-color: #51505b;}
+.side-menu ul li:nth-child(2) { background-color: #e49d8f;}
+.side-menu ul li:nth-child(3) { background-color: #51505b;}
+.side-menu ul li:nth-child(4) { background-color: #e49d8f;}
+.side-menu ul li:nth-child(5) { background-color: #51505b;}
+
+.side-menu ul li:hover {
+    background-color: black; /*you can make different colors depending on the nth-child like above*/
+    -webkit-transform: translateX(10em);
+    transform: translateX(10em);/*equal to left in the .side-menu*/
+}
+.side-menu ul li a {
+    display:block;
+    color: #FFF;
+    text-decoration: none;
+}
+.side-menu ul li span {
+    display:block;
+    position: absolute;
+    font-size:1em;
+    line-height: 2em;
+    height:2em;
+    top:0; 
+    bottom:0;
+    margin:0 auto;
+    padding:1em 1.5em;
+    right: 0.16666666666667em;
+    color: #foefed;
+}
+
+/* Full height image header */
+
+.w3-bar .w3-button {
+    padding: 18px;    
+    width: 150px;
+}
+.w3-padding-large{
+    position: absolute;
+    bottom : 90px;
+    left : 130px;
+    column-width: 250px;
+}
+
+.w3-white, .w3-hover-white:hover {
+    color: #fff!important;
+    background-color: #111111 ! important;
+}
+.w3-black, .w3-hover-black:hover {
+    color: #000!important;
+    background-color: #ebebeb!important;
+}
+.w3-green, .w3-hover-green:hover {
+    color: #fff!important;
+    background-color: rgba(214, 145, 122, 0.92) !important
+}
+
+.btn-group .select_bn {
+    background-color: #dac294;
+    border: 1px solid #252525;
+    color: #111111;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px #999;
+}
+
+.btn-group .select_bn:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+}
+.btn-group .select_bn:hover {
+    background-color: #eedfc5;
+}
+
+.topic{
+    position : relative;
+    top: 110px;
+    left : 545px;
+    font-family: 'Prompt', sans-serif;
+
+}
+
+.bn1{
+    padding: 10px ;
+    position : relative;
+    top: 130px;
+    left : 321px;
+}
+.bn2{
+    padding: 1px 35px;
+    position : relative;
+    top: 130px;
+    left : 340px;
+}
+.bn3{
+    padding: 1px 22px;
+    position : relative;
+    top: 130px;
+    left : 365px;
+}
+
+table, td, th {    
+    border: 3px solid #ddd;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    text-align: left;
+}
+
+th {
+    padding: 15px;
+    text-align: center;
+    background-color: #ebebeb;
+    color: #999;
+}
+td {
+    padding: 15px;
+    text-align: left;
+}
+table.cusinfo{
+    position: absolute;
+    top: 55%;
+    left: 24%;
+}
+table.paytable{
+    position: absolute;
+    top: 100%;
+    left: 24%;
+}
+
+
+
+
+
+footer{
+    float:left;
+    clear:both;
+    line-height: 1.3;
+    padding:30px 60px;
+    width:100%;
+    background-color: #111111;
+    ul.cta{
+        max-width:550px;
+        margin:0 auto;
+        li{
+            list-style-type:none;
+            color: #2c343b;
+            a{
+                color: #E65B53;
+            }
+        }
+    }
+}
+.expertise{
+    float:left;
+    width:100%;
+}
+.col13{
+    display:inline-block;
+    width:29%;
+    margin:2%;
+    color:#fff;
+    h2{text-align:center;}
+    p{}
+}
+h3{
+    text-transform:uppercase;
+    font-size:2em;
+    letter-spacer:2px;
+    text-align:center;
+    padding:35px 0px 0px 0px;
+    color:#fff;
+}

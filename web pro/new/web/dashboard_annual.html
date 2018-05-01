@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/selectyear_dash.css">
+    </head>
+    <body>
+        <div class="w3-top">
+            <div class="w3-bar w3-white w3-card" id="myNavbar">
+               <img src="pic/logo.png" width="35" height="30"/> </a>
+                <!-- Right-sided navbar links -->
+                <div class="w3-right w3-hide-small">
+                    <a href="logout" class="w3-bar-item w3-button"><i class="fa fa-user-circle"></i>  LOGOUT</a>
+
+                    <!--side menu -->
+                    <nav class="side-menu">
+                        <ul>
+                            <li><a href="profile_boss.jsp">PROFILE<span><i class="fa fa-user-circle" style="font-size:30px"></i></span></a></li>
+
+                            <li><a href="dashboard.jsp">DASHBOARD<span><i class="fa fa-pie-chart" style="font-size:30px"></i></span></a></li>
+                            <li><a href="selectInfoCustomer_boss.jsp">CUSTOMER INFO.<span><i class="fa fa-id-card-o" style="font-size:30px"></i></span></a></li>
+                            <li><a href="bossSelectCusPayment.jsp">PAYMENT RECORD<span><i class="fa fa-credit-card" style="font-size:30px"></i></span></a></li>
+                            <li><a href="FirstViewAnnounceServlet">EDIT TERM<span><i class="fa fa-edit" style="font-size:30px"></i></span></a></li></ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+  <center><h1>ANNUAL DASHBOARD</h1></center>
+        <form action="dashboard_annual.jsp">
+             <input type="submit" target="button" value="area" name="btn" /> <input type="submit" target="button" value="Annual Dashboard" name="btn"/><br>
+        </form><br><br>
+        <center><h2 style="float:left;">  Select Year : </h2>
+        <select id="year" name="year"></select>
+            <script>
+                var start = 2018;
+                var end = new Date().getFullYear();
+                var options = "";
+                for (var year = start; year <= end; year++) {
+                    options += "<option>" + year + "</option>";
+                }
+                document.getElementById("year").innerHTML = options;
+            </script><br><br>
+            <input type="submit" target="select_y" value="select" />
+
+        </form>
+    </body>
+</html>

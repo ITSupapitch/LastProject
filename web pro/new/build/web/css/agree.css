@@ -1,0 +1,150 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: 'Prompt', sans-serif;}
+body, html {
+    height: 100%;
+    line-height: 2;
+    font-size: 1em;
+    background-color: white;
+
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Prompt', sans-serif;
+    font-weight: 400;
+    margin: 60px 0;
+}
+
+.side-menu {
+    width:16em;
+    height: auto;
+    margin:5em auto 0;
+    font-size: 1.1em;
+    line-height: 3em;
+    color: #fff;
+    font-weight:500;
+    text-transform:uppercase;
+    position:absolute;
+    top:100px; 
+    bottom:0;
+    left: -10em;
+}
+.side-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.side-menu ul li {
+    display:block;
+    background-color: #333;
+    height: 4.5em;
+    padding: 1em 1.5em;
+    position: relative;
+    -webkit-transition: -webkit-transform 0.5s,     background-color .5s, color .5s;
+    transition: transform .5s, background-color .5s, color .5s;
+}
+/*the colors of the different columns*/
+.side-menu ul li:nth-child(1) { background-color: #51505b;}
+.side-menu ul li:nth-child(2) { background-color: #e49d8f;}
+.side-menu ul li:nth-child(3) { background-color: #51505b;}
+.side-menu ul li:nth-child(4) { background-color: #e49d8f;}
+.side-menu ul li:nth-child(5) { background-color: #51505b;}
+
+.side-menu ul li:hover {
+    background-color: black; /*you can make different colors depending on the nth-child like above*/
+    -webkit-transform: translateX(10em);
+    transform: translateX(10em);/*equal to left in the .side-menu*/
+}
+.side-menu ul li a {
+    display:block;
+    color: #FFF;
+    text-decoration: none;
+}
+.side-menu ul li span {
+    display:block;
+    position: absolute;
+    font-size:1em;
+    line-height: 2em;
+    height:2em;
+    top:0; 
+    bottom:0;
+    margin:0 auto;
+    padding:1em 1.5em;
+    right: 0.16666666666667em;
+    color: #foefed;
+}
+
+/* Full height image header */
+
+.w3-bar .w3-button {
+    padding: 18px;    
+    width: 150px;
+}
+.w3-padding-large{
+    position: absolute;
+    bottom : 90px;
+    left : 130px;
+    column-width: 250px;
+}
+
+.w3-white, .w3-hover-white:hover {
+    color: #fff!important;
+    background-color: #111111 ! important;
+}
+.w3-black, .w3-hover-black:hover {
+    color: #000!important;
+    background-color: #ebebeb!important;
+}
+.w3-green, .w3-hover-green:hover {
+    color: #fff!important;
+    background-color: rgba(214, 145, 122, 0.92) !important
+}
+.sign{
+    border-radius: 50px;
+    background-color: #f1f1f1;
+    padding: 12px;
+    width: 60%;
+    margin-left: 22%;
+    margin-top: -4%;
+}
+input[type=text],[type=password], select {
+    width: 50%;
+    padding: 5px 30px;
+    margin: 12px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-family: 'Prompt', sans-serif;
+}
+textarea {
+
+    height: 85%;
+    width: 80%;
+    margin-top: 6%;
+}
+
+input[type=submit] {
+    background-color: #e49d8f;
+    color: white;
+    padding: 5px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 22px;
+    font-family: 'Prompt', sans-serif;
+    width: 40%;
+}
+
+.topic{
+    text-align: center;
+    font-size: 80px;
+    font-weight: bold;
+    font-family: 'Prompt', sans-serif;
+    position: relative;
+    top: 20%;
+}
+
+input[type=submit]:hover {
+    background-color: #e4b8af;
+}
+
+

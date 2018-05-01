@@ -1,0 +1,122 @@
+>>>how to use: coppy this and paste when you need create table with Execute command...
+
+Create table account
+(
+account_id int(10) AUTO_INCREMENT ,
+username varchar(50) not null,
+password varchar(50) not null,
+firstname varchar(50),
+lastname varchar(50),
+phone char(10) not null,
+account_type enum('boss','employee','customer'),
+primary key (account_id)   , CONSTRAINT UC_username UNIQUE (username)
+);
+
+create table customer
+(
+account_id int (10) ,
+gender enum('male','female'),
+ban varchar(50) not null,
+soi varchar(50),
+district varchar(50) not null,
+area varchar(50) not null,
+county varchar(50) not null,
+code char(5) not null,
+primary key (account_id),
+foreign key (account_id) references account(account_id)
+);
+------------------------------------------------------------------------------------------------------------
+
+create table indenture
+(
+i_id int(10) AUTO_INCREMENT,
+end_date date not null,
+start_date date not null,
+account_id int(10),
+payment_id int (10) not null,
+primary key (i_id),
+foreign key (account_id) references account(account_id) ,
+foreign key (payment_id) references payment(payment_id) 
+);
+
+create table monthly_expense
+(
+invoice_id int (10) AUTO_INCREMENT ,
+total int(10) not null,
+slip varchar(200), ****
+bank varchar(50),
+month varchar(10) ,
+date_time_pay datetime,
+i_id int(10),
+primary key (invoice_id ),
+foreign key (i_id) references indenture(i_id) 
+);
+
+create table type_expense
+(
+type_id int (10) AUTO_INCREMENT ,
+name_type varchar(50) not null UNIQUE ,
+criterion text  not null ,
+primary key (type_id)
+);
+create table detail
+(
+price float(8,2),
+invoice_id int (10) ,
+type_id int (10) ,
+primary key (invoice_id,type_id ),
+foreign key (invoice_id) references monthly_expense(invoice_id) , 
+foreign key (type_id ) references type_expense(type_id )
+);
+
+create table payment_detail
+(
+type_contract_id int(10) AUTO_INCREMENT,
+name_type varchar(10) unique,
+primary key (type_contract_id)
+);
+
+create table payment
+(
+payment_id int (10) AUTO_INCREMENT ,
+price_book float(8,2) ,
+price_rent float(8,2) ,
+type_contract_id int(10),
+slip varchar(200),  *****
+bank varchar(50),
+tranfer_date_time DATETIME ,
+primary key (payment_id),
+foreign key (type_contract_id ) references payment_detail(type_contract_id )
+);
+
+create table announce
+(
+con_id int(10) AUTO_INCREMENT ,
+content   text not null,
+type_contract_id int(10) not null,
+primary key (con_id),
+foreign key (type_contract_id) references payment_detail(type_contract_id)
+);
+
+create table area
+(
+area_id int(10) AUTO_INCREMENT ,
+area_name varchar(50) not null,
+area_type enum('clothes','food','appliance','electronics')  not null,
+price float(8,2) not null,
+status enum('disabled', 'enable'),
+primary key (area_id)
+);
+
+
+create table inden_area
+(
+area_id int(10) ,
+i_id int(10),
+price float(8,2) not null,
+primary key (area_id,i_id ),
+foreign key (i_id) references indenture(i_id),
+foreign key (area_id ) references area(area_id )
+);
+
+????? getter setter acccount ????????????? 
